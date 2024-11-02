@@ -1,0 +1,182 @@
+---
+layout: default
+permalink: /devis
+title:
+description:
+keywords: Devis
+---
+
+<section class="banner">
+  <div class="container">
+    <div class="slider_content">
+      <h1 class="slider_content-title">DEVIS EN LIGNE</h1>
+      <!-- <div class="slider_content-button">
+        <a href="{% link contact.html %}" class="slider_content-button--a">
+          NOUS CONTACTER
+          <img src="../assets/img/btn-arrow.png" alt="Arrow Icon" class="slider_content-button--img">
+        </a>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<section class="menu section pb-0">
+  <div class="container-fluid">
+    <div class="row align-items-end">
+      <div class="col-md-12">
+        <div class="menu_content container">
+          <h2 class="menu_content-title text-center mb-2">Besoin d’un devis personnalisé ?</h2>
+          <p class="menu_content-p text-center">
+            Nous vous invitons à nous contacter pour obtenir un devis adapté à vos besoins. Que vous souhaitez
+            externaliser une partie de vos opérations comptables ou que vous ayez besoin d’un accompagnement à temps
+            plein, nous vous proposerons une offre sur mesure.
+            <br><br>
+            Remplissez le formulaire ci-dessous et nous vous recontacterons dans les plus brefs délais.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact section-y">
+  <div class="container to-100-per-768">
+    <form class="form contact_content-form" id="devisForm" method="post" action="{{ site.data.company.url.notify }}">
+      <input type="hidden" name="lang" value="{{ site.data.company.lang }}" />
+      <input type="hidden" name="type" value="devis" />
+      <input type="hidden" name="firstName" value="" />
+      <input type="hidden" name="redirectUrl" value="{{site.data.company.url.redirect}}" />
+      <input type="hidden" name="key" value="{{ site.data.company.recaptcha.server }}" />
+      <input type="hidden" name="website" value="{{site.data.company.website}}" />
+    <div class="row">
+      <div class="col-md-6">
+        <div class="menu_content mb-0">
+          <legend class="menu_content-header3 text-left">Coordonnées</legend>
+        </div>
+        <div class="contact_content">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="black_form-input" id="prenom" name="prenom" placeholder="Prénom(s)*" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="black_form-input" id="name" name="name" placeholder="Nom*" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="black_form-input" id="email" name="email" placeholder="Email*" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="number" class="black_form-input" id="phone" name="phone" placeholder="Tél*" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="black_form-input" id="societe" name="societe" placeholder="Société*" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <select name="quelle-installation" id="quelle-installation" class="black_form-input">
+                    <option value="Objet" selected>Type*</option>
+                    <option value="Cabinet comptable">Cabinet comptable</option>
+                    <option value="Entreprise">Entreprise</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="text" class="black_form-input" id="address" name="address" placeholder="Adresse*" />
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="menu_content mb-0">
+          <legend class="menu_content-header3 text-left">Demande</legend>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group has-feedback">
+              <label class="black_form-labeltitle text-left justify-content-start text-black f-w-700">Type de prestations</label>
+              <div class="row flex-column align-items-start">
+                <div class="col-sm-8">
+                  <div class="checkbox" style="margin-top: 0;">
+                    <label class="black_form-label text-left justify-content-start text">
+                      <input type="checkbox" name="checkbox1"> &nbsp; Gestion des Documents Comptables
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="checkbox" style="margin-top: 0;">
+                    <label class="black_form-label text-left justify-content-start text">
+                      <input type="checkbox" name="checkbox2"> &nbsp; Saisie comptable 
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="checkbox" style="margin-top: 0;">
+                    <label class="black_form-label text-left justify-content-start text">
+                      <input type="checkbox" name="checkbox3"> &nbsp; Déclarations Fiscales
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="checkbox" style="margin-top: 0;">
+                    <label class="black_form-label text-left justify-content-start text">
+                      <input type="checkbox" name="checkbox3"> &nbsp; Reporting
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="checkbox" style="margin-top: 0;">
+                    <label class="black_form-label text-left justify-content-start text">
+                      <input type="checkbox" name="checkbox3"> &nbsp; Comptabilité Clients / Fournisseurs
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="checkbox" style="margin-top: 0;">
+                    <label class="black_form-label text-left justify-content-start text">
+                      <input type="checkbox" name="checkbox3"> &nbsp; Clôtures Comptables
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <textarea class="black_form-input h-100" id="commentaire" rows="4" placeholder="Message"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="checkbox d-flex mb-5">
+      <input name="condition" type="checkbox"
+        style="height:2rem; width:2rem; vertical-align: middle; margin-right: 1rem;" />
+      <span class="contact_content-form--label" style="font-size: 1.4rem; color: #000;">
+        En utilisant ce formulaire, vous acceptez le stockage et la gestion
+        de vos données par ce site * <a href="#" data-toggle="modal" class="link"
+          data-target="#modal-rgpd"><i class="fa fa-info-circle"></i></a></span>
+      <i class="fa fa-info-square" aria-hidden="true"></i>
+    </div>
+    <div class="form-group d-flex justify-content-center">
+      <div class="g-recaptcha" data-sitekey="{{ site.data.company.recaptcha.client }}"></div>
+      <br />
+      <div id="devis-form-response"></div>
+    </div>
+    <div class="d-flex justify-content-center w-auto">
+      <button type="submit" class="button form-submit black_form-button w-auto" value="Submit">Envoyer</button>
+    </div>
+  </form>
+  </div>
+</section>

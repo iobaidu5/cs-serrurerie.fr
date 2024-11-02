@@ -1,0 +1,145 @@
+---
+layout: default
+permalink: /contact
+title: 
+description: 
+keywords:
+---
+
+<section class="banner">
+  <div class="container">
+    <div class="slider_content">
+      <h1 class="slider_content-title">NOUS CONTACTER</h1>
+      <!-- <div class="slider_content-button">
+        <a href="#" class="slider_content-button--a">
+          DEMANDE DE DEVIS
+          <img src="../assets/img/btn-arrow.png" alt="Arrow Icon" class="slider_content-button--img">
+        </a>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+
+<section class="menu section pb-0">
+  <div class="container-fluid">
+    <div class="row align-items-end">
+      <div class="col-md-12">
+        <div class="menu_content container">
+          <p class="menu_content-p text-center">
+            Etes-vous prêt à simplifier la gestion de votre comptabilité et à dégager du temps pour vous focaliser sur le développement de votre entreprise ? Prenez contact avec nous aujourd'hui pour explorer de quelle manière nous pouvons vous soutenir dans l'externalisation de vos services comptables avec efficacité et sérénité.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact section-y">
+  <div class="container to-100-per-768">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="menu_content">
+          <h2 class="menu_content-title text-left mb-2">Nos coordonnées.</h2>
+          <hr>
+        </div>
+        <div class="contact_info mt-5 pt-5">
+          <span class="contact_info-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+          <div class="contact_info-content">
+            <h3 class="contact_info-content--title">Adresse</h3>
+            <p class="contact_info-content--p">
+              {{site.data.company.address}}
+            </p>
+          </div>
+        </div>
+        <div class="contact_info mt-3">
+          <span class="contact_info-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+          <div class="contact_info-content">
+            <h3 class="contact_info-content--title">Contact</h3>
+            <p class="contact_info-content--p"><a href="tel:{{site.data.company.phone}}"
+                class="contact_info-content--link">{{site.data.company.phone}}</a></p>
+            <p class="contact_info-content--p"><a href="mailto:{{site.data.company.email}}"
+                class="contact_info-content--link">{{site.data.company.email}}</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="menu_content">
+          <h2 class="menu_content-title text-left mb-2">Contactez nous !</h2>
+          <hr>
+        </div>
+        <br><br>
+        <div class="contact_content">
+          <form class="form contact_content-form" id="contactForm" method="post"
+            action="{{ site.data.company.url.notify }}">
+            <input type="hidden" name="lang" value="fr" />
+            <input type="hidden" name="redirectUrl" value="{{site.data.company.url.redirect}}" />
+            <input type="hidden" name="type" value="contact" />
+            <input type="hidden" name="website" value="{{ site.data.company.website }}" />
+            <input type="hidden" name="lang" value="{{ site.data.company.lang }}" />
+            <input type="hidden" name="firstName" value="" />
+            <input type="hidden" name="key" value="{{ site.data.company.recaptcha.server }}" />
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="black_form-input" id="name" name="name" placeholder="Nom/ Prénom *"
+                    required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="black_form-input" id="societe" name="societe" placeholder="Société *"
+                    required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="number" class="black_form-input" id="phone" name="phone" placeholder="Téléphone">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="email" class="black_form-input" id="email" name="email" aria-describedby="emailHelp"
+                    placeholder="Email*" required>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="text" class="black_form-input" id="objet" name="objet"
+                    placeholder="Objet*" required>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <textarea type="text" class="black_form-input h-100" id="message" name="message"
+                    placeholder="Message" rows="3" required></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="g-recaptcha" data-sitekey="{{ site.data.company.recaptcha.client }}">
+              </div>
+              <br />
+              <div id="contact-form-response" class="text-white" style="color: #333 !important; font-size: 1rem;">
+              </div>
+              <input style="display: none" type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
+            </div>
+            <div class="checkbox d-flex mt-4">
+              <input name="condition" type="checkbox" style="height: 2rem; width: 2rem; vertical-align: middle;"
+                class="check" />
+              <span class="black_space-form--label text"
+                style="color: #333 !important; margin-left: 1rem; font-size: 1.3rem;">&nbsp;En utilisant ce
+                formulaire,
+                vous acceptez le stockage et la gestion de vos données par ce site *</span>
+              <i class="fa fa-info-square" aria-hidden="true"></i>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="button form-submit black_form-button"
+                value="Submit">Envoyer</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
