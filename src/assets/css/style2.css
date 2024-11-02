@@ -45,7 +45,7 @@ section {
 }
 
 .container {
-  width: 80%
+  width: 80% !important; 
 }
 
 h1,
@@ -176,7 +176,7 @@ h4 {
 a {
   text-decoration: none;
   color: #2F6D7C;
-  font-size: 16px
+  font-size: 16px;
 }
 
 ul {
@@ -502,7 +502,8 @@ table tr td:last-child {
 }
 
 .w-50 {
-  width: 50%
+  width: 50%;
+  display: block;
 }
 
 .w-60 {
@@ -553,12 +554,13 @@ table tr td:last-child {
 
 @media screen and (max-width:992px) and (min-width:545px) {
   .w-md-100 {
-    width: 100%
+    width: 100%;
   }
 }
 
 .w-100 {
-  width: 100%
+  width: 100%;
+  display: block;
 }
 
 .top-73 {
@@ -902,7 +904,7 @@ section.bg-gray .bg-blue p {
 
 .btn-green a {
   background: #59D1AE;
-  color: white;
+  color: #fff;
   border: 1px solid white
 }
 
@@ -1781,10 +1783,10 @@ section.bg-gray .bg-blue p {
   }
 }
 
-.form-contact .col-md-6,
+/* .form-contact .col-md-6,
 .form-devis .col-md-6 {
   padding: 5px 0
-}
+} */
 
 @media (max-width:992px) {
 
@@ -2069,7 +2071,7 @@ section.bg-gray .bg-blue p {
   text-align: left;
   color: #2F6D7C;
   z-index: 2;
-  padding-top: 300px
+  padding-top: 300px;
 }
 
 @media screen and (max-width:992px) {
@@ -2114,5 +2116,18 @@ section.bg-gray .bg-blue p {
 }
 
 .map .container {
-  width: 95%
+  width: 95%;
+}
+
+
+
+@media (min-width: 992px) {
+  .container {
+      max-width: 2170px !important;
+  }
+}
+
+
+.link{
+  color: #59D1AE !important;
 }

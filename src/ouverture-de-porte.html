@@ -16,65 +16,11 @@ keywords:
     </div>
   </div>
 </section>
-<section class="form-contact">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <form method="post">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="field">
-                <label for="lastname">Nom*</label>
-                <input type="text" id="lastname" class="simple-form" name="lastname" placeholder="Nom" value=""
-                  autocomplete="lastname" required="">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="field">
-                <label for="firstname">Prénom*</label>
-                <input type="firstname" id="firstname" class="simple-form" name="firstname" placeholder="Prénom"
-                  value="" autocomplete="firstname" required="">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="field">
-                <label for="email">Email*</label>
-                <input type="email" id="email" class="simple-form" name="email" placeholder="text@exemple.fr" value=""
-                  autocomplete="email" required="">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="field">
-                <label for="phone">Téléphone*</label>
-                <input type="text" id="phone" class="simple-form" name="phone" placeholder="06 00 00 00 00" value=""
-                  autocomplete="phone" required="">
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <label for="service">Objet*</label>
-            <input type="text" id="service" class="simple-form" name="service" placeholder="Service" value=""
-              autocomplete="service" required="">
-          </div>
-          <div class="field btns">
-            <label for="rgpd">
-              <input type="checkbox" id="rgpd" class="simple-form w-auto" name="rgpd" autocomplete="off">
-              En utilisant ce formulaire, vous acceptez le stockage et la gestion de vos données par ce site *
-            </label>
-            <button type="submit" value="Demande de contact" class="submit form-submit"
-              name="form-contact">Envoyer</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+{% include form.html %}
 <section>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 items-center gap-0">
+      <div class="col-md-12 items-center gap-0 my-5">
         <p class="text-center">Les problèmes de serrurerie peuvent survenir à n’importe quel moment, et il est crucial
           d’avoir un serrurier qualifié et de confiance à votre disposition.</p>
         <p class="text-center">C'est pourquoi nous restons actifs 24h/24 et 7j/7 pour toutes vos urgences et requêtes en
@@ -87,7 +33,7 @@ keywords:
 <section class="bg-gray py-4">
   <div class="container">
     <h2>UNE PRISE EN CHARGE RAPIDE AVEC CS Serrurerie</h2>
-    <div class="row pt-3">
+    <div class="row pt-5 align-items-center">
       <div class="col-md-6 p-0">
         <img
           src="http://8f56569e09.testing-url.ws/cs-serrurerie.fr/assets/img/pages/ouverture-de-porte/cle-sur-porte.webp"
@@ -101,56 +47,65 @@ keywords:
           d'intervenir. Si nous estimons que votre serrure peut être réparée, nous ne procéderons à aucune modification
           inutile. Notre service de serrurerie sert toujours les intérêts des clients avec professionnalisme et
           honnêteté.</p>
-        <div class="btn btn-green w-100 text-center">
-          <a href="http://8f56569e09.testing-url.ws/cs-serrurerie.fr/contact" class="w-100">Contactez-nous</a>
+        <div class="btn btn-green w-100 text-center mt-4">
+          <a href="{% link contact.html %}" class="w-100">Contactez-nous</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-2">
+<section class="py-2 mt-2">
   <div class="container">
     <h2 class="pt-2">Des Services de Serrurerie Complète</h2>
-    <p class="text-center py-4">Experte en travaux de menuiserie métallique et en serrurerie depuis 2017, l’entreprise
+    <p class="text-center py-5">Experte en travaux de menuiserie métallique et en serrurerie depuis 2017, l’entreprise
       CS Serrurerie est votre partenaire de confiance pour tous vos besoins en serrurerie à Chilly-Mazarin et
       Épinay-sur-Orge.</p>
     <div class="row">
-      <div class="col-md-3 bg-blue">
-        <div class="content">
-          <h3>Ouverture de porte normal et blindée</h3>
-          <p class="text-center">Nous sommes spécialisés dans l'ouverture de tous types de portes, qu'elles soient
-            standard ou blindées. Notre expertise garantit une ouverture efficace sans endommager votre porte ou votre
-            serrure.</p>
+      <div class="col-md-3">
+        <div class="bg-blue">
+          <div class="content">
+            <h3>Ouverture de porte normal et blindée</h3>
+            <p class="text-center">Nous sommes spécialisés dans l'ouverture de tous types de portes, qu'elles soient
+              standard ou blindées. Notre expertise garantit une ouverture efficace sans endommager votre porte ou votre
+              serrure.</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-3 bg-blue">
-        <div class="content">
-          <h3>Changement de serrure multipoints</h3>
-          <p class="text-center">Pour une sécurité renforcée, nous proposons l'installation de serrures multipoints. Ces
-            systèmes avancés offrent une protection supérieure contre les effractions, assurant ainsi une tranquillité
-            d'esprit accrue pour nos clients.</p>
+      <div class="col-md-3">
+        <div class="bg-blue">
+          <div class="content">
+            <h3>Changement de serrure multipoints</h3>
+            <p class="text-center">Pour une sécurité renforcée, nous proposons l'installation de serrures multipoints.
+              Ces
+              systèmes avancés offrent une protection supérieure contre les effractions, assurant ainsi une tranquillité
+              d'esprit accrue pour nos clients.</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-3 bg-blue">
-        <div class="content">
-          <h3>Réparation après infraction</h3>
-          <p class="text-center">Si vous avez été victime d'une effraction, notre équipe intervient rapidement pour
-            réparer les dommages et restaurer la sécurité de votre domicile ou de votre entreprise.</p>
+      <div class="col-md-3">
+        <div class="bg-blue">
+          <div class="content">
+            <h3>Réparation après infraction</h3>
+            <p class="text-center">Si vous avez été victime d'une effraction, notre équipe intervient rapidement pour
+              réparer les dommages et restaurer la sécurité de votre domicile ou de votre entreprise.</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-3 bg-blue">
-        <div class="content">
-          <h3>Blindage et renforcement de porte</h3>
-          <p class="text-center">Chez CS Serrurerie, nous comprenons l'importance cruciale de la sécurité de votre
-            domicile ou de votre entreprise. C'est pourquoi nous offrons un service spécialisé de blindage et
-            renforcement de porte, conçu pour augmenter significativement la résistance de vos entrées contre les
-            tentatives d'effraction.</p>
+      <div class="col-md-3">
+        <div class="bg-blue">
+          <div class="content">
+            <h3>Blindage et renforcement de porte</h3>
+            <p class="text-center">Chez CS Serrurerie, nous comprenons l'importance cruciale de la sécurité de votre
+              domicile ou de votre entreprise. C'est pourquoi nous offrons un service spécialisé de blindage et
+              renforcement de porte, conçu pour augmenter significativement la résistance de vos entrées contre les
+              tentatives d'effraction.</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="btn btn-green py-4 w-100 items-center text-center">
-      <a href="http://8f56569e09.testing-url.ws/cs-serrurerie.fr/contact" class="w-50">Contactez-nous</a>
+    <div class="btn btn-green py-4 w-100 my-3 items-center text-center d-flex justify-content-center">
+      <a href="{% link contact.html %}" class="w-50">Contactez-nous</a>
     </div>
   </div>
 </section>
@@ -159,34 +114,41 @@ keywords:
   <div class="container">
     <h2 class="pb-3">Nos Avantages</h2>
     <div class="row">
-      <div class="col-md-4 bg-blue">
-        <div class="content items-center">
-          <img src="http://8f56569e09.testing-url.ws/cs-serrurerie.fr/assets/img/icons/settings.webp"
-            class="icon-responsive" alt="Icône Rouage" loading="lazy" width="100%" height="100%">
-          <h3>Dépannage urgence</h3>
-          <p class="text-center">Nous comprenons que les problèmes de serrurerie nécessitent souvent une intervention
-            immédiate. C'est pourquoi notre service de dépannage d'urgence est disponible 24h/24 et 7j/7, pour répondre
-            à vos besoins à tout moment.</p>
+      <div class="col-md-4">
+        <div class="bg-blue mx-3">
+          <div class="content items-center">
+            <img src="http://8f56569e09.testing-url.ws/cs-serrurerie.fr/assets/img/icons/settings.webp"
+              class="icon-responsive" alt="Icône Rouage" loading="lazy" width="100%" height="100%">
+            <h3>Dépannage urgence</h3>
+            <p class="text-center">Nous comprenons que les problèmes de serrurerie nécessitent souvent une intervention
+              immédiate. C'est pourquoi notre service de dépannage d'urgence est disponible 24h/24 et 7j/7, pour
+              répondre
+              à vos besoins à tout moment.</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-4 bg-blue">
-        <div class="content items-center">
-          <img src="http://8f56569e09.testing-url.ws/cs-serrurerie.fr/assets/img/icons/unlock.webp"
-            class="icon-responsive" alt="Icône Cadenas ouverrt" loading="lazy" width="100%" height="100%">
-          <h3>Serrurier pas cher, nos prix en toute transparence</h3>
-          <p class="text-center">Si vous avez été victime d'une effraction, notre équipe intervient rapidement pour
-            réparer les dommages et restaurer la sécurité de votre domicile ou de votre entreprise.</p>
+      <div class="col-md-4">
+        <div class="bg-blue mx-3">
+          <div class="content items-center">
+            <img src="http://8f56569e09.testing-url.ws/cs-serrurerie.fr/assets/img/icons/unlock.webp"
+              class="icon-responsive" alt="Icône Cadenas ouverrt" loading="lazy" width="100%" height="100%">
+            <h3>Serrurier pas cher, nos prix en toute transparence</h3>
+            <p class="text-center">Si vous avez été victime d'une effraction, notre équipe intervient rapidement pour
+              réparer les dommages et restaurer la sécurité de votre domicile ou de votre entreprise.</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-4 bg-blue">
-        <div class="content items-center">
-          <img src="http://8f56569e09.testing-url.ws/cs-serrurerie.fr/assets/img/icons/position.webp"
-            class="icon-responsive" alt="Icône Position" loading="lazy" width="100%" height="100%">
-          <h3>Proximité à Draveil et Longjumeau</h3>
-          <p class="text-center">Chez CS Serrurerie, nous comprenons l'importance cruciale de la sécurité de votre
-            domicile ou de votre entreprise. C'est pourquoi nous offrons un service spécialisé de blindage et
-            renforcement de porte, conçu pour augmenter significativement la résistance de vos entrées contre les
-            tentatives d'effraction.</p>
+      <div class="col-md-4">
+        <div class="bg-blue mx-3">
+          <div class="content items-center">
+            <img src="http://8f56569e09.testing-url.ws/cs-serrurerie.fr/assets/img/icons/position.webp"
+              class="icon-responsive" alt="Icône Position" loading="lazy" width="100%" height="100%">
+            <h3>Proximité à Draveil et Longjumeau</h3>
+            <p class="text-center">Chez CS Serrurerie, nous comprenons l'importance cruciale de la sécurité de votre
+              domicile ou de votre entreprise. C'est pourquoi nous offrons un service spécialisé de blindage et
+              renforcement de porte, conçu pour augmenter significativement la résistance de vos entrées contre les
+              tentatives d'effraction.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -224,7 +186,7 @@ keywords:
         </tr>
       </tbody>
     </table>
-    <p class="text-center fw-bold py-4 pb-0">Tant que l’intervention n’est pas finalisée, aucun frais ne vous sera
+    <p class="text-center fw-bold py-4 pb-0 mt-2">Tant que l’intervention n’est pas finalisée, aucun frais ne vous sera
       facturé.</p>
   </div>
 </section>
@@ -241,26 +203,26 @@ keywords:
 <section class="bg-gray py-4 mb-2">
   <div class="container">
     <div class="row pt-3">
-      <div class="col-md-6 p-0">
+      <div class="col-md-6">
         <img
           src="http://8f56569e09.testing-url.ws/cs-serrurerie.fr/assets/img/pages/ouverture-de-porte/cle-sur-porte-2.webp"
           class="img-responsive br-3 w-95 w-md-50 w-sm-100 h-100 of-cover" alt="Clé sur une porte" loading="lazy"
           width="100%" height="100%">
       </div>
-      <div class="col-md-6 p-0">
+      <div class="col-md-6">
         <h3>Contactez-nous dès maintenant</h3>
         <p class="pr-0"><strong>Pour toute demande de service ou pour obtenir un devis gratuit, n'hésitez pas à nous
             contacter.</strong> Notre équipe de serruriers professionnels est prête à vous fournir des solutions
           rapides, fiables et abordables pour tous vos besoins en serrurerie.</p>
-        <p><strong>Notre charte de qualité :</strong></p>
+        <p class="my-4"><strong>Notre charte de qualité :</strong></p>
         <ul>
           <li>Professionnalisme dans toutes nos opérations</li>
           <li>Réactivité pour vos besoins de dépannage en urgence</li>
           <li>Prix transparents et adaptés</li>
           <li>Paiements sécurisés</li>
         </ul>
-        <div class="btn btn-green w-100 text-center">
-          <a href="http://8f56569e09.testing-url.ws/cs-serrurerie.fr/contact" class="w-100">Contactez-nous</a>
+        <div class="btn btn-green w-100 text-center mt-3">
+          <a href="{% link contact.html %}" class="w-100">Contactez-nous</a>
         </div>
       </div>
     </div>
@@ -271,18 +233,22 @@ keywords:
   <section class="py-4 numbers">
     <div class="bg-blue bg-blue-lock d-flex content-center">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12 flex-row flex-md-column content-space-between items-md-center py-2 gap-md-4">
+        <div class="row justify-content-between w-100">
+          <div class="col-md-4">
             <div class="counter">
-              <p data-target="20">20</p>
+              <p data-target="20" class="counter-count">20</p>
               <p>Années d'expérience</p>
             </div>
+          </div>
+          <div class="col-md-4">
             <div class="counter">
-              <p data-target="10">10</p>
+              <p data-target="10" class="counter-count">10</p>
               <p>Serruriers actifs</p>
             </div>
+          </div>
+          <div class="col-md-4">
             <div class="counter">
-              <p data-target="100">100%</p>
+              <p data-target="100"><span class="counter-count">100</span> <span>%</span></p>
               <p>de clients satisfait</p>
             </div>
           </div>
@@ -292,8 +258,8 @@ keywords:
   </section>
 </div>
 
-<section class="map">
-  <div class="container">
+<section class="map mx-5">
+  <div class="container-fluid">
     <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2636.5594304537776!2d2.349578576451743!3d48.67104607130236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5fdf8c1ffcc9b%3A0xa9bc8bf241f3aeca9!2s108+Avenue+Roger+Salengro%2C+91600+Savigny-sur-Orge!5e0!3m2!1sfr!2sfr!4v1704704794829!5m2!1sfr!2sfr"></iframe>
   </div>

@@ -1,22 +1,4 @@
----
-layout: default
-permalink: /contact
-title:
-description:
-keywords:
----
-
-
-<section class="header bg-contact">
-  <div class="container">
-    <h1>CONTACT</h1>
-    <div class="diamond">
-      <div class="diamond-inner"></div>
-    </div>
-  </div>
-</section>
-
-<section class="form-contact pb-100">
+<section class="form-contact">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -54,19 +36,9 @@ keywords:
             </div>
           </div>
           <div class="field">
-            <label for="subject">Objet*</label>
-            <select name="subject" class="simple-form" id="subject" required="">
-              <option>Demande d'information générale</option>
-              <option>Demande d'information tarifaire</option>
-              <option>Proposition commerciale</option>
-              <option>Recrutement</option>
-              <option>Autre</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="message">Message*</label>
-            <textarea class="simple-form" id="message" name="message" rows="8" autocomplete="off"
-              required=""></textarea>
+            <label for="service">Objet*</label>
+            <input type="text" id="service" class="simple-form" name="service" placeholder="Service" value=""
+              autocomplete="service" required="">
           </div>
           <div class="field btns">
             <label for="rgpd">
