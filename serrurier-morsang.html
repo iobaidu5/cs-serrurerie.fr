@@ -1,0 +1,495 @@
+<!doctype html>
+<html>
+  <head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="stylesheet" href="./assets/css/style2.css">
+  <link rel="icon" href="./assets/img/home.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/fancybox.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./assets/js/popper.min.js"></script>
+  <script defer src="./assets/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/fancybox.umd.js"></script>
+
+  <title></title>
+<meta property="og:title" content="" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="description" content="" />
+<meta property="og:description" content="" />
+<meta name="keywords" content="" />
+<link rel="canonical" href="http://localhost:4000/serrurier-morsang" />
+<meta property="og:url" content="http://localhost:4000/serrurier-morsang" />
+<meta property="og:site_name" content="" />
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebSite",
+"url":"http://localhost:4000/serrurier-morsang",
+"description":"",
+"name":""
+}
+</script>
+
+</head>
+  <body id="page-wrapper">
+    <div id="navbar" class="navbar">
+  <a href="./index.html" style="z-index: 1">
+      <img src="./assets/img/logo.png" alt="Logo de CS Serrurerie" loading="lazy" width="100%" height="100%">
+  </a>
+  <div class="btn-toggle" id="navbar-toggle" onclick="document.getElementById('navbar').classList.toggle('open')">
+      <span></span>
+  </div>
+  <nav id="navbar-nav">
+      <a href="./nos-services.html">Nos services</a>
+      <a href="./ouverture-de-porte.html">Ouverture de porte</a>
+      <a href="./qui-sommes-nous.html">Qui sommes nous ?</a> 
+      <a href="./devis.html">Devis</a>
+      <a href="./contact.html">Contact</a>
+  </nav>
+</div>
+
+    
+
+    <div class="">
+        <section class="header bg-pp">
+  <div class="container">
+      <h1>SERRURIER <b>MORSANG SUR ORGE</b> UN SERVICE <b>RECONNU ET APPROUVÉ</b></h1>
+    <div class="diamond">
+      <div class="diamond-inner"></div>
+    </div>
+  </div>
+</section>
+<section class="form-contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form class="form" method="post" id="contactForm" action="https://jgviaboye9.execute-api.eu-west-3.amazonaws.com/prod/notify">
+          <input type="hidden" name="lang" value="fr">
+          <input type="hidden" name="redirectUrl" value="/message-envoye" />
+          <input type="hidden" name="type" value="contact" />
+          <input type="hidden" name="website" value="" />
+          <input type="hidden" name="lang" value="fr" />
+          <input type="hidden" name="firstName" value="" />
+          <input type="hidden" name="key" value="6LdGWnQqAAAAALH7yWpIzmMXhRkNOMdHkV2G2nAD">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="field">
+                <label for="lastname">Nom*</label>
+                <input type="text" id="lastname" class="simple-form" name="lastname" placeholder="Nom" value=""
+                  autocomplete="lastname" required="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="field">
+                <label for="firstname">Prénom*</label>
+                <input type="firstname" id="firstname" class="simple-form" name="firstname" placeholder="Prénom"
+                  value="" autocomplete="firstname" required="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="field">
+                <label for="email">Email*</label>
+                <input type="email" id="email" class="simple-form" name="email" placeholder="text@exemple.fr" value=""
+                  autocomplete="email" required="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="field">
+                <label for="phone">Téléphone*</label>
+                <input type="text" id="phone" class="simple-form" name="phone" placeholder="06 00 00 00 00" value=""
+                  autocomplete="phone" required="">
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="service">Objet*</label>
+            <input type="text" id="service" class="simple-form" name="service" placeholder="Service" value=""
+              autocomplete="service" required="">
+          </div>
+          <div class="form-group d-flex justify-content-center">
+            <div class="g-recaptcha" data-sitekey="6LdGWnQqAAAAADb8BmqWl9SVk-lOHUhs61g1Sswy">
+            </div>
+            <br />
+            <div id="contact-form-response" class="text-white" style="color: #fff !important; font-size: 1rem;"></div>
+            <input style="display: none" type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
+          </div>
+          <div class="field btns">
+            <label for="rgpd">
+              <input type="checkbox" id="rgpd" class="simple-form w-auto" name="rgpd" autocomplete="off">
+              En utilisant ce formulaire, vous acceptez le stockage et la gestion de vos données par ce site *
+            </label>
+            <button type="submit" value="Demande de contact" class="submit form-submit"
+              name="form-contact">Envoyer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-gray py-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center">Une prise en charge rapide avec SERRURIER MORSANG SUR ORGE</h2>
+      </div>
+
+    </div>
+    <div class="row mt-5 align-items-center">
+      <div class="col-md-6">
+        <img src="./assets/img/1.webp" alt="image3"
+          class="img-responsive br-3 w-md-50">
+      </div>
+
+
+      <div class="col-md-6">
+        <p class=""><strong>L'équipe de chez Serrurier Morsang sur orge reste toujours à l’écoute de ses
+            clients</strong>, particuliers ou professionnels. Nous intervenons dans un délai minimal de 15 à 30 minutes
+          pour des situations d’urgence soumis à notre service. Nos serruriers savent comment s’adapter et agir selon la
+          situation qui se présente. Vous avez la possibilité de contacter notre service via notre formulaire de contact
+          en ligne et pour obtenir des devis détaillés et transparents concernant votre projet serrure. Vous pouvez nous
+          appeler au <a class="link" href="tel:01 85 53 38 97"><b>01 85 53 38 97</b></a> pour obtenir des informations sur nos
+          procédés.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center my-4">Pourquoi opter pour les services de SERRURIER MORSANG SUR ORGE ?</h2>
+      </div>
+
+    </div>
+    <div class="row mt-4 align-items-center">
+      <div class="col-md-6">
+        <p class="">Serrurier Morsang sur Orge fait partie de ses entreprises de serrurerie qui a pour tâches de
+          garantir la sécurité de votre résidence, entreprise, commerce et locaux. En choisissant nos services, vous
+          pourrez profiter de nos services de dépannage en serrures proposés par nos serruriers certifiés et compétents.
+          Si vous avez un problème de serrure, n'hésitez pas à faire appel à une entreprise certifiée comme
+          <strong>Serrurier Morsang sur orge</strong>. Nous sommes réputées pour notre qualité de travail, rapidité et
+          fiabilité. Tous nos serruriers proposent des services classiques et plus complexes liés à vos serrures,
+          portes, fenêtres et systèmes de sécurité. Nous accordons une grande importance à la satisfaction de notre
+          clientèle, et nos serruriers peuvent venir pour réparer vos problèmes de serrures à tout moment.</p>
+      </div>
+
+
+      <div class="col-md-6">
+        <img src="./assets/img/2.webp" alt="image3"
+          class="img-responsive br-3 w-md-50">
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="py-3">
+        <h2 class="pb-3">SERRURIER MORSANG SUR ORGE en chiffre</h2>
+        <p class="text-center">Chez Serrurier Morsang sur Orge, nos serruriers professionnels évaluent d'abord la
+          situation avant d'intervenir. S'ils voient que votre serrure peut être réparée, ils ne feront aucun
+          remplacement. Ils travaillent toujours pour l'intérêt des clients et ils sont toujours professionnels et
+          proactifs pour des besoins de dépannage en urgences.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 p-0 items-center">
+        <h2 class="text-center"><strong>Ouverture de porte à partir de 90€ sans dégradation</strong></h2>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-4 numbers">
+  <div class="bg-blue bg-blue-lock d-flex content-center">
+    <div class="container">
+      <div class="row justify-content-between w-100">
+        <div class="col-md-4">
+          <div class="counter">
+            <p data-target="20" class="counter-count">20</p>
+            <p>Années d'expérience</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="counter">
+            <p data-target="10" class="counter-count">10</p>
+            <p>Serruriers actifs</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="counter">
+            <p data-target="100"><span class="counter-count">100</span> <span>%</span></p>
+            <p>de clients satisfait</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 p-0">
+        <h2 class="">Voici quelques-uns de nos points forts :</h2>
+        <ul class="ml-5">
+          <li>Service de serruriers agrées</li>
+          <li>Apte à résoudre tous vos problèmes de sécurité</li>
+          <li>Utilisation des outils de dernière génération pour réaliser vos travaux de serrurier</li>
+          <li>Assurance d'avoir un service rapide</li>
+          <li>Satisfaction de nos clients garantie</li>
+          <li>Des tarifs concurrentiels et transparents</li>
+          <li>Devis gratuit sans engagement</li>
+          <li>Actifs sur Morsang sur orge et ses environs</li>
+          <li>Disponible de janvier à décembre, jour et nuit, jour férié et week-end Intervention en urgence et 24/24 et
+            7/7</li>
+          <li>Installation, entretien et réparation de serrures de toutes marques</li>
+          <li>Service de dépannage et de remplacement de vos serrures</li>
+          <li>Amélioration ou renforcement de vos systèmes de sécurité</li>
+          <li>Ouverture de portes coincées</li>
+          <li>Blindage de portes</li>
+          <li>Duplicata de clef de sécurité</li>
+          <li>Des services adaptés à vos besoins</li>
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<section class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 my-5">
+        <h2 class="text-center">Serrurier Morsang sur orge votre expert en serrures et travaux menuiserie métallique
+        </h2>
+      </div>
+
+    </div>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="./assets/img/3.webp" alt="image3"
+          class="img-responsive br-3 w-md-50">
+      </div>
+
+
+      <div class="col-md-6">
+        <p class="">Spécialiste en menuiserie métallique et serrurerie depuis 2017, <strong>Serrurier Morsang sur orge
+            propose ses services aux particuliers et entreprises</strong> afin de les aider à résoudre tous problèmes de
+          dysfonctionnements liés à leurs serrures et tous autres équipements de sécurités (portes, fenêtres, baies
+          vitrées ...). Étant donné que les complications de serrures sont habituellement imprévisibles ou inattendues,
+          car on ne connaît pas les signes annonciateurs d’une serrure à problème, il est nécessaire d'avoir un
+          serrurier crédible et expérimenté à portée de main.</p>
+      </div>
+
+    </div>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p class=""><strong>C'est pour cette raison que CS Serrurerie pris l\’initiative d’être à votre service 24h/24
+            et 7j/7</strong> pour répondre à tous vos besoins et urgences concernant votre serrurerie et système de
+          sécurité. <strong>Serrurier Morsang sur orge vient en aide à ses clients</strong> dans des circonstances
+          d'urgence liées à la sécurité de leur logement ou entreprise.</p>
+      </div>
+
+
+      <div class="col-md-6">
+        <img src="./assets/img/4.webp" alt="image3"
+          class="img-responsive br-3 w-md-50">
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="bg-gray py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 content-start">
+        <img src="./assets/img/5.webp" alt="image3"
+          class="img-responsive br-3 w-md-50">
+        <p class="my-4">Parceque le besoin de se sentir en sécurité chez soi est crucial et que les systèmes de sécurité
+          évoluent constamment, l'équipe de serrurier professionnel de Morsang sur orge est toujours attentive aux
+          nouvelles technologies liées à l'efficacité et à la sécurité de votre serrurerie et système de sécurité.</p>
+      </div>
+
+
+      <div class="col-md-6 content-start">
+        <img src="./assets/img/6.webp" alt="image3"
+          class="img-responsive br-3 w-md-50">
+        <p class="my-4">Quels que soient vos besoins : installation et entretien de vos travaux de serrurerie et système de
+          sécurité (porte blindée, rideaux de fer...), vous pouvez compter sur nos serruriers proactifs et compétents.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="bg-blue py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 ">
+        <p class="text-center"><strong>Pour tous vos soucis de serrure et de système de sécurité défectueux, nous sommes
+            joignables par téléphone au <a href="tel:01 85 53 38 97"><b>01 85 53 38 97</b></a></strong>. Nous vous
+          invitons à remplir notre formulaire en ligne pour un devis gratuit sans engagement.</p>
+          <br>
+        <div class="btn btn-green text-center d-flex justify-content-center mt-3"><a href="tel:01 85 53 38 97" class="btn-green text-center">01 85 53 38 97</a></div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<section class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 py-2">
+        <h2 class="my-3">Les prestations principales de SERRURIER MORSANG SUR ORGE :</h2>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-12 p-0">
+        <ul class="ml-5">
+          <li>Installation, réparation, dépannage et remplacement de serrurerie</li>
+          <li>Installation, réparation, dépannage et remplacement de vitrerie - clair, teinté, trempé, feuilleté,
+            coupe-feu, pare-balles, par-flammes</li>
+          <li>Installation, réparation, et remplacement de menuiserie ALU / PVC - installation de fenêtres, baies
+            vitrées, porte-fenêtre, verrières..</li>
+          <li>Installation, réparation, dépannage et remplacement de rideau métallique</li>
+          <li>Installation, réparation, dépannage et remplacement de tout type de volet roulant</li>
+        </ul>
+        <p class="my-4">Vous pouvez obtenir un devis gratuit, rapide, simple et sans engagement en remplissant notre
+          formulaire en ligne. <strong>Nous mettons un point d’honneur à vous conseiller et à vous accompagner</strong>
+          pour répondre à vos besoins dans les meilleurs délais possible, donc veuillez nous appeler au <a
+            href="tel:01 85 53 38 97" class="link"><b>01 85 53 38 97</b></a>.</p>
+        <div class="btn btn-green text-center"><a href="tel:01 85 53 38 97" class="btn-green text-center link">01 85 53 38 97</a></div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<section class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 py-2">
+        <h2 class="text-center my-4">Fournisseur de travaux de menuiserie métallique et en serrurerie.</h2>
+        <p class="">Spécialisé en travaux de menuiserie métallique et en serrurerie depuis plusieurs années,
+          l’entreprise <strong>Serrurier Morsang sur orge</strong> vous aide à réparer vos serrures dysfonctionnelles et
+          solutionner tous vos soucis concernant la sécurité de votre logement ou entreprise.</p><br>
+        <p class="">Comme un dysfonctionnement de serrurerie peut arriver à n’importe quel moment, il est nécessaire
+          d’avoir un serrurier agrée, expérimenté et fiable sous la main. <strong>L’entreprise Serrurier Morsang sur
+            orge vous propose son service 24h/24 et 7j/7</strong> pour toutes vos demandes et urgences liées au
+          dysfonctionnement de votre serrure et de votre système de sécurité.</p><br>
+        <p class="">En optant pour le service de <strong>Serrurier Morsang sur orge</strong>, vous serez à l'abri de
+          tout stress, car nous disposons d’une équipe de serruriers certifiés et expérimentés qui prendront en charge
+          vos travaux de menuiserie métallique et en serrurerie. Nous pouvons vous assister dans l'urgence, mais aussi
+          dans vos requêtes en matière de votre logement, commerce ou entreprise.</p><br>
+        <p class=""><strong>Nous sommes très actifs à Morsang sur orge et nous intervenons rapidement avec rapidité afin
+            de résoudre votre problème de porte ou de fenêtres.</strong></p><br>
+        <p class="">Nous sommes joignables au <a href="tel:01 85 53 38 97" class="link"><b>01 85 53 38 97</b></a> pour tous
+          renseignements. <strong>Notre service client vous conseillera et vous accompagnera pour répondre au mieux à
+            vos besoins</strong> et votre budget, et cela, dans les meilleurs délais possibles. Nous vous invitons
+          également à remplir notre formulaire en ligne pour un devis gratuit et sans engagement.</p>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<section class="map mx-5">
+  <div class="container-fluid">
+    <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2636.5594304537776!2d2.349578576451743!3d48.67104607130236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5fdf8c1ffcc9b%3A0xa9bc8bf241f3aeca9!2s108+Avenue+Roger+Salengro%2C+91600+Savigny-sur-Orge!5e0!3m2!1sfr!2sfr!4v1704704794829!5m2!1sfr!2sfr"></iframe>
+  </div>
+</section>
+    </div>
+    <div class="fixphone">
+      <a href="tel:01 85 53 38 97" title="01 85 53 38 97" class="one phoneone">
+       <span class="text-white"><i class="fas fa-phone-alt"></i> &nbsp;01 85 53 38 97</span> 
+      </a>
+    </div>
+
+    <footer id="footer">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-4 gap-1 py-md-1">
+        <p class="text-left">Coordonnées</p>
+        <a href="tel:+33185533897" class="text-left">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.6274 15C9.61641 15 6.76126 13.4952 4.12955 10.9008C0.554407 7.32042 -0.960065 3.32497 0.62889 1.56075C0.703372 1.48291 0.802681 1.40508 0.901991 1.35319L2.91301 0.159742C3.43439 -0.151593 4.0799 0.00407449 4.42748 0.522965L5.8923 2.7023C6.06609 2.96175 6.14057 3.27308 6.06609 3.58442C6.01644 3.86981 5.84265 4.12925 5.59437 4.31086L4.72541 4.90759C5.39575 5.91942 7.20815 8.43604 10.0881 10.2262C10.113 10.2522 10.1378 10.2262 10.1378 10.2262L10.7585 9.3441C11.1061 8.85115 11.7764 8.72143 12.2978 9.05871L14.4826 10.5116C15.004 10.8489 15.1529 11.5494 14.8302 12.0942L13.6385 14.0919C13.564 14.1957 13.4895 14.2995 13.415 14.3773C12.9681 14.7924 12.3474 15 11.6274 15ZM3.48404 1.17158L1.44819 2.36502C0.504752 3.42875 1.67164 6.82748 4.92403 10.0446C8.22608 13.3136 11.6274 14.4811 12.7198 13.4952L13.9116 11.4975L11.7267 10.0446C11.7019 10.0446 11.6771 10.0446 11.6771 10.0446L11.0564 10.9267C10.7088 11.4197 10.0385 11.5494 9.54193 11.238C6.4385 9.29221 4.50197 6.59398 3.8068 5.53025C3.63301 5.27081 3.58335 4.95948 3.63301 4.67409C3.68266 4.36275 3.85645 4.10331 4.10473 3.94764L4.97369 3.35092L3.5337 1.19752C3.50887 1.19752 3.48404 1.17158 3.48404 1.17158Z"
+              fill="white"></path>
+          </svg>
+          01 85 53 38 97 </a>
+        <a href="mailto:ilyesse@bhgroupe.fr"  class="text-left">
+          <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.4406 0H1.55941C0.717822 0 0 0.684444 0 1.54V9.46C0 10.2911 0.693069 11 1.55941 11H13.4406C14.2822 11 15 10.3156 15 9.46V1.51556C15 0.684444 14.2822 0 13.4406 0ZM13.4406 1.1C13.4653 1.1 13.4901 1.1 13.5149 1.1L7.5 4.91333L1.48515 1.1C1.5099 1.1 1.53465 1.1 1.55941 1.1H13.4406ZM13.4406 9.85111H1.55941C1.31188 9.85111 1.11386 9.65556 1.11386 9.41111V2.17556L6.90594 5.84222C7.07921 5.96444 7.27723 6.01333 7.47525 6.01333C7.67327 6.01333 7.87129 5.96444 8.04455 5.84222L13.8366 2.17556V9.43556C13.8861 9.68 13.6881 9.85111 13.4406 9.85111Z"
+              fill="white"></path>
+          </svg>
+          ilyesse@bhgroupe.fr </a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=108+Avenue+Roger+Salengro%2C+91600+Savigny-sur-Orge"
+          class="text-left" target="_blank">
+          <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M4.55298 0C2.03973 0 0 2.3245 0 5.18709C0 7.36093 2.4404 10.8046 3.87914 12.6556C4.06126 12.8924 4.29801 13 4.55298 13C4.80795 13 5.0447 12.8709 5.22682 12.6556C6.66556 10.8046 9.10596 7.36093 9.10596 5.18709C9.10596 2.3245 7.06622 0 4.55298 0ZM4.62583 12.0099C4.5894 12.053 4.53477 12.053 4.48013 12.0099C2.71358 9.72848 0.819536 6.75828 0.819536 5.18709C0.819536 2.86258 2.49503 0.968543 4.55298 0.968543C6.61093 0.968543 8.28642 2.86258 8.28642 5.18709C8.28642 6.75828 6.39238 9.72848 4.62583 12.0099Z"
+              fill="white"></path>
+            <path
+              d="M4.55346 2.9917C3.46074 2.9917 2.56836 4.04634 2.56836 5.33773C2.56836 6.62912 3.46074 7.70527 4.55346 7.70527C5.64617 7.70527 6.53856 6.65064 6.53856 5.35925C6.53856 4.06786 5.64617 2.9917 4.55346 2.9917ZM4.55346 6.73673C3.89783 6.73673 3.3879 6.11256 3.3879 5.35925C3.3879 4.60594 3.91604 3.98177 4.55346 3.98177C5.19088 3.98177 5.71902 4.60594 5.71902 5.35925C5.71902 6.11256 5.20909 6.73673 4.55346 6.73673Z"
+              fill="white"></path>
+          </svg>
+          108 Avenue Roger Salengro 91600 Savigny-sur-Orge </a>
+      </div>
+      <div class="col-md-4 items-lg-center items-md-start py-md-1 gap-1">
+        <a href="./serrurier-morsang.html">Serrurier Morsang sur Orge</a>
+        <a href="./dormir-apres-cambriolage.html">Dormir sereinement après un
+          cambriolage</a>
+        <a href="./serrurier-morangis.html">Serrurier Morangis</a>
+        <a href="./serrurier-epinay-sur-orge.html">Serrurier
+          Épinay-sur-Orge</a>
+        <a href="./vitrier-epinay-sur-orge.html">Vitrier Épinay-sur-Orge</a>
+        <a href="./vitrier-morsang-sur-orge.html">Vitrier
+          Morsang-sur-Orge</a>
+        <a href="./vitrier-savigny-sur-orge.html">Vitrier
+          Savigny-sur-Orge</a>
+        <a href="./vitrier-morangis.html">Vitrier Morangis</a>
+        <a href="./vitrier-chilly-mazarin.html">Vitrier Chilly-Mazarin</a>
+      </div>
+      <div class="col-md-4 items-end items-md-start gap-1 py-md-1">
+        <a href="./index.html" class="text-right">Accueil</a>
+        <a href="./contact.html" class="text-right">Contact</a>
+        <a href="./devis.html" class="text-right">Devis</a>
+      </div>
+    </div>
+    <br>
+  </div>
+</footer>
+<div class="copyright">
+  <a href="https://www.bhinternet.fr/" class="link" target="_blank">BHInternet - Création site internet | 2024</a>
+</div>
+
+
+<script src="./assets/js/index.js"></script>
+<script src="./assets/js/formSubmit.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <a href="#" id="fixphone" title="Up"><i class="fa fa-chevron-up"></i></a>
+  </body>
+</html>
