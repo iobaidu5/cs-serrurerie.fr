@@ -20,7 +20,14 @@ keywords:
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <form method="post">
+        <form class="form" method="post" id="contactForm" action="{{ site.data.company.url.notify }}">
+          <input type="hidden" name="lang" value="fr">
+          <input type="hidden" name="redirectUrl" value="{{site.data.company.url.redirect}}" />
+          <input type="hidden" name="type" value="contact" />
+          <input type="hidden" name="website" value="{{ site.data.company.website }}" />
+          <input type="hidden" name="lang" value="{{ site.data.company.lang }}" />
+          <input type="hidden" name="firstName" value="" />
+          <input type="hidden" name="key" value="{{ site.data.company.recaptcha.server }}">
           <div class="row">
             <div class="col-md-6">
               <div class="field">
@@ -67,6 +74,13 @@ keywords:
             <label for="message">Message*</label>
             <textarea class="simple-form" id="message" name="message" rows="8" autocomplete="off"
               required=""></textarea>
+          </div>
+          <div class="form-group  d-flex justify-content-center">
+            <div class="g-recaptcha" data-sitekey="{{ site.data.company.recaptcha.client }}">
+            </div>
+            <br />
+            <div id="contact-form-response" class="text-white" style="color: #fff !important; font-size: 1rem;"></div>
+            <input style="display: none" type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
           </div>
           <div class="field btns">
             <label for="rgpd">
